@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # web_api_cadastro
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# app-cadastro-cliente-flutter
+>>>>>>> 92388468402c66daa2a2053d67d91e4d4d8a9c7c
