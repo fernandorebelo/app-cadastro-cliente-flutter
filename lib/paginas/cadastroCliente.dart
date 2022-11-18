@@ -35,18 +35,20 @@ class _CadastroClienteState extends State<CadastroCliente> {
   Widget build(BuildContext context) {
     final args = ModalRoute.of(context)?.settings.arguments as Cliente;
     nomeController.text = args.nome;
-    idadeController.text = args.idade.toString();
+    idadeController.text = args.idade == 0 ? '' : args.idade.toString();
+    sexoController.text = args.sexo;
+    cidadeController.text = args.cidade.id.toString();
 
     cadastrarButton() async {
-      // Cidade cidade = Cidade(args.cidade.id, args.cidade.nome, args.cidade.uf);
       Cliente cliente = Cliente(args.id, nomeController.text,
           sexoController.text, int.parse(idadeController.text), args.cidade);
       if (cliente.id == 0) {
         await AcessoApi().insereCliente(cliente.toJson());
+        print('enviou');
       } else {
         await AcessoApi().alteraCliente(cliente.toJson());
       }
-      Navigator.of(context).pop();
+      Navigator.of(context).pushReplacementNamed('/consulta');
     }
 
     return Scaffold(

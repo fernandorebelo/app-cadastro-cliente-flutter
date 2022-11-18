@@ -73,7 +73,8 @@ class _ConsultaState extends State<Consulta> {
   }
 
   editarItem(Cliente cliente, context) {
-    Navigator.pushNamed(context, '/cadastro-cliente', arguments: cliente);
+    Navigator.pushReplacementNamed(context, '/cadastro-cliente',
+        arguments: cliente);
   }
 
   atualizaPagina() {

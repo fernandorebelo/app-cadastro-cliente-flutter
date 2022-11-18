@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:web_api_cadastro/model/cidade.dart';
+import 'package:web_api_cadastro/model/cliente.dart';
 import 'package:web_api_cadastro/util/componentes.dart';
 
 class Home extends StatefulWidget {
@@ -26,11 +28,13 @@ class _HomeState extends State<Home> {
   }
 
   cadastrarClienteButton() {
-    Navigator.of(context).pushReplacementNamed('/cadastro-cliente');
+    Navigator.of(context).pushReplacementNamed('/cadastro-cliente',
+        arguments: Cliente(0, '', 'M', 0, Cidade(0, '', '')));
   }
 
   cadastrarCidadeButton() {
-    Navigator.of(context).pushReplacementNamed('/cadastro-cidade');
+    Navigator.of(context)
+        .pushReplacementNamed('/cadastro-cidade', arguments: Cidade(0, '', ''));
   }
 
   @override

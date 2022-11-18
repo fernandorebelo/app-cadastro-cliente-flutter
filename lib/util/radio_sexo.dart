@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:web_api_cadastro/model/cliente.dart';
 
 enum Sexo { masculino, feminino }
 
@@ -18,6 +19,10 @@ class _RadioSexoState extends State<RadioSexo> {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)?.settings.arguments as Cliente;
+    if (args != null) {
+      _character = args.sexo == 'M' ? Sexo.masculino : Sexo.feminino;
+    }
     return Row(
       children: [
         Expanded(

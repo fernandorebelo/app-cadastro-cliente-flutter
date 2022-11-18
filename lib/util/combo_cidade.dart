@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:web_api_cadastro/api/acesso_api.dart';
 import 'package:web_api_cadastro/model/cidade.dart';
+import 'package:web_api_cadastro/model/cliente.dart';
 
 class ComboCidade extends StatefulWidget {
   TextEditingController? controller;
@@ -17,6 +18,12 @@ class _ComboCidadeState extends State<ComboCidade> {
   int? cidadeSelecionada;
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)?.settings.arguments as Cliente;
+    if (args.cidade.id == 0) {
+      cidadeSelecionada;
+    } else {
+      cidadeSelecionada = args.cidade.id;
+    }
     return FutureBuilder(
       future: Future.delayed(const Duration(seconds: 1))
           .then((value) => AcessoApi().listaCidades()),
