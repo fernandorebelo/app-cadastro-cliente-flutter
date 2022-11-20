@@ -6,7 +6,6 @@ import 'package:web_api_cadastro/model/cidade.dart';
 import 'package:web_api_cadastro/model/cliente.dart';
 import 'package:web_api_cadastro/paginas/cadastroCliente.dart';
 import 'package:web_api_cadastro/util/componentes.dart';
-import 'package:web_api_cadastro/util/constantes.dart';
 
 class Consulta extends StatefulWidget {
   const Consulta({super.key});
@@ -17,8 +16,6 @@ class Consulta extends StatefulWidget {
 
 class _ConsultaState extends State<Consulta> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
-  Constantes constante = Constantes();
 
   List<Cliente> lista = [];
 

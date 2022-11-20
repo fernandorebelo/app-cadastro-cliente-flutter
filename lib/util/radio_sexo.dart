@@ -20,7 +20,7 @@ class _RadioSexoState extends State<RadioSexo> {
   @override
   Widget build(BuildContext context) {
     final args = ModalRoute.of(context)?.settings.arguments as Cliente;
-    if (args != null) {
+    if (args.id != 0) {
       _character = args.sexo == 'M' ? Sexo.masculino : Sexo.feminino;
     }
     return Row(

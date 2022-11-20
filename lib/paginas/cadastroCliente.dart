@@ -8,12 +8,9 @@ import 'package:web_api_cadastro/paginas/consultaCidade.dart';
 import 'package:web_api_cadastro/paginas/consultaCliente.dart';
 import 'package:web_api_cadastro/util/combo_cidade.dart';
 import 'package:web_api_cadastro/util/componentes.dart';
-import 'package:web_api_cadastro/util/constantes.dart';
 import 'package:web_api_cadastro/util/radio_sexo.dart';
 
 class CadastroCliente extends StatefulWidget {
-  // List<Cliente>? listaClientes;
-  // Function? atualizaPagina;
   const CadastroCliente({super.key});
 
   @override
@@ -40,11 +37,14 @@ class _CadastroClienteState extends State<CadastroCliente> {
     cidadeController.text = args.cidade.id.toString();
 
     cadastrarButton() async {
-      Cliente cliente = Cliente(args.id, nomeController.text,
-          sexoController.text, int.parse(idadeController.text), args.cidade);
+      Cliente cliente = Cliente(
+          args.id,
+          nomeController.text,
+          sexoController.text,
+          int.parse(idadeController.text),
+          Cidade(int.parse(cidadeController.text), '', ''));
       if (cliente.id == 0) {
         await AcessoApi().insereCliente(cliente.toJson());
-        print('enviou');
       } else {
         await AcessoApi().alteraCliente(cliente.toJson());
       }

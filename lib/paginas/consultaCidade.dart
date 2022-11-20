@@ -9,7 +9,6 @@ import 'package:web_api_cadastro/model/cliente.dart';
 import 'package:web_api_cadastro/paginas/cadastroCidade.dart';
 import 'package:web_api_cadastro/paginas/consultaCliente.dart';
 import 'package:web_api_cadastro/util/componentes.dart';
-import 'package:web_api_cadastro/util/constantes.dart';
 
 class ConsultaCidade extends StatefulWidget {
   const ConsultaCidade({super.key});
