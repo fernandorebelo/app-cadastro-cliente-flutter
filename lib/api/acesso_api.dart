@@ -4,6 +4,7 @@ import 'package:http/http.dart';
 import 'package:web_api_cadastro/model/cidade.dart';
 import 'package:web_api_cadastro/model/cliente.dart';
 
+//MÉTODOS PARA CIDADES
 class AcessoApi {
   Future<List<Cidade>> listaCidades() async {
     String url = 'http://localhost:8080/cidade';
@@ -44,6 +45,7 @@ class AcessoApi {
     await delete(Uri.parse(url));
   }
 
+//MÉTODOS PARA CLIENTES
   Future<List<Cliente>> listaClientes() async {
     String url = 'http://localhost:8080/cliente';
     Response resposta = await get(Uri.parse(url));
