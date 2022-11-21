@@ -69,6 +69,12 @@ class Componentes {
     );
   }
 
+  criaItemCidadeUf(Cidade cidade) {
+    return ListTile(
+      title: criaTexto('Estado - ${cidade.uf}'),
+    );
+  }
+
   textFormField(texto, controller, keyboardType) {
     return Padding(
       padding: const EdgeInsets.all(10.0),

@@ -6,6 +6,7 @@ import 'package:web_api_cadastro/model/cidade.dart';
 import 'package:web_api_cadastro/model/cliente.dart';
 import 'package:web_api_cadastro/util/combo_cidade.dart';
 import 'package:web_api_cadastro/util/componentes.dart';
+import 'package:web_api_cadastro/util/dropdown_estados.dart';
 
 class ConsultaClientePorUf extends StatefulWidget {
   const ConsultaClientePorUf({super.key});
@@ -19,6 +20,7 @@ class _ConsultaClientePorUfState extends State<ConsultaClientePorUf> {
   TextEditingController ufController = TextEditingController();
 
   List<Cliente> lista = [];
+  // List<Cidade> lista = [];
 
   listarTodas() async {
     List<Cliente> clientes = await AcessoApi().listaClientes();
@@ -26,6 +28,13 @@ class _ConsultaClientePorUfState extends State<ConsultaClientePorUf> {
       lista = clientes;
     });
   }
+
+  // listarTodas() async {
+  //   List<Cidade> cidades = await AcessoApi().listaCidades();
+  //   setState(() {
+  //     lista = cidades;
+  //   });
+  // }
 
   rotaIconButton() {
     Navigator.of(context).pushReplacementNamed('/home');
@@ -39,41 +48,16 @@ class _ConsultaClientePorUfState extends State<ConsultaClientePorUf> {
     ufController.text = args.cidade.uf;
 
     return Scaffold(
-      appBar: Componentes()
-          .appBar(rotaIconButton, const Text('CONSULTAR CLIENTE POR UF')),
-      body: Form(
-        key: _formKey,
-        child: Center(
-          child: Column(
+        appBar: Componentes()
+            .appBar(rotaIconButton, const Text('CONSULTAR CLIENTE POR UF')),
+        body: Form(
+          key: _formKey,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ComboCidade(
-                controller: ufController,
-              ),
-              Componentes().criaBotao('Pesquisar', listarTodas, 50, _formKey),
-              Expanded(
-                  child: Container(
-                child: ListView.builder(
-                  itemCount: lista.length,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      elevation: 6,
-                      margin: const EdgeInsets.all(10),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            flex: 5,
-                            child: Componentes().criaItemCliente(lista[index]),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              )),
+              DropdownEstados(),
             ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
