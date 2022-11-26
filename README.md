@@ -4,6 +4,8 @@
 
 Aplicação para cadastro de clientes e cidades.
 
+Desenvolvido com Flutter.
+
 Conexão com a [API de clientes e cidades](https://github.com/fernandorebelo/api-devti-persistencia)
 
 Tela inicial
@@ -12,36 +14,44 @@ Tela inicial
 
 Tela de consulta de clientes
 
-![image](https://user-images.githubusercontent.com/94297628/202904349-938f6663-da73-445b-9619-a1ab20fd84a4.png)
+![image](/lib/assets/telas/consultas%20-%20clientes.jpg)
+
+Tela de consulta de clientes por cidade
+
+![image](/lib/assets/telas/consultas%20-%20clientes%20por%20cidade.jpg)
+
+Tela de consulta de clientes - ao clicar no ícone de remover
+
+![image](/lib/assets/telas/consultas%20-%20clientes%20-%20ao%20clicar%20no%20%C3%ADcone%20de%20remover.jpg)
+
+Tela de consulta de clientes - ao clicar no ícone de editar
+
+![image](/lib/assets/telas/consultas%20-%20clientes%20-%20ao%20clicar%20no%20%C3%ADcone%20de%20editar.jpg)
 
 Tela de consulta de cidades
 
-![image](https://user-images.githubusercontent.com/94297628/202904366-1cd9a307-18b0-4a99-a2cc-22293bc292a0.png)
+![image](/lib/assets/telas/consultas%20-%20cidades.jpg)
 
-Tela de cadastro de clientes
+Tela de consulta de cidades por UF
 
-![image](https://user-images.githubusercontent.com/94297628/202904380-9141374b-d424-4165-973a-fb1f150ccde6.png)
+![image](/lib/assets/telas/consultas%20-%20cidade%20por%20uf%20-%20uf%20selecionada.jpg)
 
-Tela de cadastro de clientes - Uso do botão dropdown carregando cidades cadastradas
+Teça de consulta de cidades por UF - UF selecionada
 
-![image](https://user-images.githubusercontent.com/94297628/202904497-47d53d73-d0eb-4454-a8a4-f301946ecd87.png)
+![image](/lib/assets/telas/consultas%20-%20cidade%20por%20uf%20-%20uf%20selecionada.jpg)
 
-Tela de cadastro de cidade
+Tela de consulta de cidades por UF - dropdown com todos os estados
 
-![image](https://user-images.githubusercontent.com/94297628/202904440-bb871179-7ded-4a9b-a381-a23f62fcf2e4.png)
+![image](/lib/assets/telas/consultas%20-%20cidade%20por%20uf%20-%20dropdown%20com%20todos%20os%20estados.jpg)
 
-Tela de alteração de cliente ao clicar no botão editar
+Tela de cadastro de Clientes
 
-![image](https://user-images.githubusercontent.com/94297628/202904546-2af2fd4d-963d-4b9b-80bf-5b221c6c364a.png)
+![image](/lib/assets/telas/cadastros%20-%20clientes.jpg)
 
-Botão para remover clientes
+Tela de cadastro de clientes - combobox das cidades cadastradas previamente
 
-![image](https://user-images.githubusercontent.com/94297628/202904574-f63c731e-68be-4283-91ae-d216c619c1b1.png)
+![image](/lib/assets/telas/cadastros%20-%20clientes%20-%20combobox%20de%20cidades%20cadastradas.jpg)
 
-Tela para alteração de cadastro de cidade
+Tela de cadastro de Cidades
 
-![image](https://user-images.githubusercontent.com/94297628/202904603-15c5990f-773f-4dec-917a-4d69f85c89b1.png)
-
-Botão para remover cidades
-
-![image](https://user-images.githubusercontent.com/94297628/202904627-ca771951-6dd2-4399-9ce0-e6e1eb91d433.png)
+![image](/lib/assets/telas/cadastros%20-%20cidades.jpg)
