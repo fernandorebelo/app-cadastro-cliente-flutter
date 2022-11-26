@@ -82,6 +82,10 @@ class _ConsultaState extends State<Consulta> {
     Navigator.of(context).pushReplacementNamed('/home');
   }
 
+  rotaBuscarClientePorCidade() {
+    Navigator.of(context).pushReplacementNamed('/consulta-cliente-cidade');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,6 +99,10 @@ class _ConsultaState extends State<Consulta> {
                 const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 5)),
                 Componentes()
                     .criaBotao('Atualizar lista', listarTodas, 50, _formKey),
+                Componentes().criaBotao('Buscar cliente por cidade',
+                    rotaBuscarClientePorCidade, 50, _formKey),
+                Componentes().criaTexto(
+                    'Cliente cadastrados: ${lista.length.toString()}'),
                 Expanded(
                     child: Container(
                   child: ListView.builder(

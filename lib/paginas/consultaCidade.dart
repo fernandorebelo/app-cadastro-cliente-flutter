@@ -96,6 +96,8 @@ class _ConsultaCidadeState extends State<ConsultaCidade> {
               const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 5)),
               Componentes()
                   .criaBotao('Atualizar lista', listarTodas, 50, _formKey),
+              Componentes()
+                  .criaTexto('Cidades cadastrados: ${lista.length.toString()}'),
               Expanded(
                   child: Container(
                 child: ListView.builder(

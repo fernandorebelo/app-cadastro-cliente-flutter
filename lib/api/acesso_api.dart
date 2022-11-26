@@ -86,13 +86,13 @@ class AcessoApi {
     await delete(Uri.parse(url));
   }
 
-  Future<List<Cliente>> pesquisarClientePorUf(String uf) async {
-    String url = 'http://localhost:8080/cliente/$uf';
+  Future<List<Cliente>> pesquisarClientePorCidade(String cidade) async {
+    String url = 'http://localhost:8080/cliente/$cidade';
     Response resposta = await get(Uri.parse(url));
     String jsonFormatadoUtf8 = (utf8.decode(resposta.bodyBytes));
     Iterable lista = json.decode(jsonFormatadoUtf8);
     List<Cliente> clientes =
-        List<Cliente>.from(lista.map((e) => Cliente.fromJson));
+        List<Cliente>.from(lista.map((e) => Cliente.fromJson(e)));
     return clientes;
   }
 }
