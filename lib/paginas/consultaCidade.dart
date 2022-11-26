@@ -83,6 +83,10 @@ class _ConsultaCidadeState extends State<ConsultaCidade> {
     Navigator.of(context).pushReplacementNamed('/home');
   }
 
+  rotaBuscarCidadePorUf() {
+    Navigator.of(context).pushReplacementNamed('/consulta-cidade-uf');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,6 +100,8 @@ class _ConsultaCidadeState extends State<ConsultaCidade> {
               const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 5)),
               Componentes()
                   .criaBotao('Atualizar lista', listarTodas, 50, _formKey),
+              Componentes().criaBotao(
+                  'Buscar cidade por UF', rotaBuscarCidadePorUf, 50, _formKey),
               Componentes()
                   .criaTexto('Cidades cadastrados: ${lista.length.toString()}'),
               Expanded(

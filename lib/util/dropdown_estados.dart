@@ -3,7 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class DropdownEstados extends StatefulWidget {
-  const DropdownEstados({super.key});
+  TextEditingController? controller;
+  DropdownEstados({super.key, this.controller});
 
   @override
   State<DropdownEstados> createState() => _DropdownEstadosState();
@@ -22,6 +23,7 @@ class _DropdownEstadosState extends State<DropdownEstados> {
         // This is called when the user selects an item.
         setState(() {
           dropdownValue = value!;
+          widget.controller?.text = value;
         });
       },
       items: list.map<DropdownMenuItem<String>>((String value) {

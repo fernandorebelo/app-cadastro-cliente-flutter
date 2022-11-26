@@ -39,6 +39,10 @@ class _HomeState extends State<Home> {
     Navigator.of(context).pushReplacementNamed('/consulta-cliente-cidade');
   }
 
+  consultarCidadePorUf() {
+    Navigator.of(context).pushReplacementNamed('/consulta-cidade-uf');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,12 +60,14 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Componentes().criaTexto('Consultas'),
-                        Componentes().criaBotao('Consultar Clientes',
-                            consultarClienteButton, 50, _formKey),
-                        Componentes().criaBotao('Consultar Cidades',
-                            consultarCidadeButton, 50, _formKey),
-                        Componentes().criaBotao('Consultar Clientes por Cidade',
+                        Componentes().criaBotao(
+                            'Clientes', consultarClienteButton, 50, _formKey),
+                        Componentes().criaBotao(
+                            'Cidades', consultarCidadeButton, 50, _formKey),
+                        Componentes().criaBotao('Clientes por Cidade',
                             consultarClientePorCidade, 50, _formKey),
+                        Componentes().criaBotao('Cidade por UF',
+                            consultarCidadePorUf, 50, _formKey),
                       ],
                     ),
                   ),

@@ -25,13 +25,6 @@ class _ConsultaClientePorCidadeState extends State<ConsultaClientePorCidade> {
     });
   }
 
-  listarTodas() async {
-    List<Cliente> clientes = await AcessoApi().listaClientes();
-    setState(() {
-      lista = clientes;
-    });
-  }
-
   rotaIconButton() {
     Navigator.of(context).pushReplacementNamed('/home');
   }

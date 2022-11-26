@@ -45,6 +45,16 @@ class AcessoApi {
     await delete(Uri.parse(url));
   }
 
+  Future<List<Cidade>> pesquisarCidadePorUf(String uf) async {
+    String url = 'http://localhost:8080/cidade/$uf';
+    Response resposta = await get(Uri.parse(url));
+    String jsonFormatadoUtf8 = (utf8.decode(resposta.bodyBytes));
+    Iterable lista = json.decode(jsonFormatadoUtf8);
+    List<Cidade> clientes =
+        List<Cidade>.from(lista.map((e) => Cidade.fromJson(e)));
+    return clientes;
+  }
+
 //MÉTODOS PARA CLIENTES
   Future<List<Cliente>> listaClientes() async {
     String url = 'http://localhost:8080/cliente';

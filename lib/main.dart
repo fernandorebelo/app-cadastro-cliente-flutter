@@ -4,6 +4,7 @@ import 'package:web_api_cadastro/paginas/cadastroCidade.dart';
 import 'package:web_api_cadastro/paginas/cadastroCliente.dart';
 import 'package:web_api_cadastro/paginas/consultaCidade.dart';
 import 'package:web_api_cadastro/paginas/consultaCliente.dart';
+import 'package:web_api_cadastro/paginas/consultarCidadePorUf.dart';
 import 'package:web_api_cadastro/paginas/consultarClientePorCidade.dart';
 import 'package:web_api_cadastro/paginas/home.dart';
 
@@ -34,6 +35,7 @@ class _MyAppState extends State<MyApp> {
         '/consulta-cidade': (context) => const ConsultaCidade(),
         '/consulta-cliente-cidade': (context) =>
             const ConsultaClientePorCidade(),
+        '/consulta-cidade-uf': (context) => const ConsultaCidadePorUf(),
       },
     );
   }
