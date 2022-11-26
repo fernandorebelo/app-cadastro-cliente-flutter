@@ -8,7 +8,7 @@ Conexão com a [API de clientes e cidades](https://github.com/fernandorebelo/api
 
 Tela inicial
 
-![image](https://user-images.githubusercontent.com/94297628/202904331-474007b3-66ef-44d1-a83b-42a35424092a.png)
+![image](/lib/assets/telas/home.jpg)
 
 Tela de consulta de clientes
 
