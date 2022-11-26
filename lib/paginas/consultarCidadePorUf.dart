@@ -35,7 +35,7 @@ class _ConsultaCidadePorUfState extends State<ConsultaCidadePorUf> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Componentes()
-          .appBar(rotaIconButton, const Text('CONSULTAR CLIENTE POR CIDADE')),
+          .appBar(rotaIconButton, const Text('CONSULTAR CIDADE POR UF')),
       body: Form(
         key: _formKey,
         child: Center(
